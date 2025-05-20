@@ -24,17 +24,3 @@ let documentActions = (e) => {
 	}
 }
 document.addEventListener('click', documentActions)
-document.addEventListener('DOMContentLoaded', function () {
-  const submenuToggles = document.querySelectorAll('.submenu-toggle');
-
-  submenuToggles.forEach(toggle => {
-    toggle.addEventListener('click', function (e) {
-      // Лише на мобільних
-      if (window.innerWidth <= 520) {
-        e.preventDefault();
-        const parent = this.closest('.menu__item--has-submenu');
-        parent.classList.toggle('open');
-      }
-    });
-  });
-});
